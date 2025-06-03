@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -37,10 +39,10 @@ public class UserCreatingTests {
                 .contentType(JSON)
                 .log().uri()
 
-                .when()
+            .when()
                 .post("https://reqres.in/api/users")
 
-                .then()
+            .then()
                 .log().status()
                 .log().body()
                 .statusCode(201);
